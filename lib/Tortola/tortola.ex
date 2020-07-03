@@ -1,14 +1,25 @@
 defmodule Tortola do
-  use
+    use Application
 
-  alias Tortola.Database, as: DB
+    @moduledoc false
+    def start(_type, _args) do
+        env = Application.get_env(:tortola, Tortola)
+        
+        children = [
+            {
+                MyXQL,
+                username: env[:dbusername],
+                password: env[:dbpassword],
+                hostname: env[:dbhostname],
+                port: env[:dbport],
+                name: :ddbb
+            },
+            Tortola.CronWatchdog,
+            Tortola.Scheduler
+        ]
 
-  @moduledoc false
-  def main do
-    children = [
-      ContadoresWatchdog
-    ]
-
-    Supervisor.start_link(children, strategy: :one_for_one)
-  end
+        # Start supervisor tree
+        opts = [strategy: :one_for_one, name: Tortola.Supervisor]
+        Supervisor.start_link(children, opts)
+    end
 end

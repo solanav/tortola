@@ -8,9 +8,12 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/connection" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/crontab" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/db_connection" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/decimal" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/gen_stage" />
       <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/myxql" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/quantum" />
       <excludeFolder url="file://$MODULE_DIR$/assets/node_modules/phoenix" />
       <excludeFolder url="file://$MODULE_DIR$/assets/node_modules/phoenix_html" />
       <excludeFolder url="file://$MODULE_DIR$/cover" />
@@ -18,6 +21,7 @@
       <excludeFolder url="file://$MODULE_DIR$/doc" />
       <excludeFolder url="file://$MODULE_DIR$/logs" />
     </content>
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="myxql" level="project" />
     <orderEntry type="library" name="db_connection" level="project" />
@@ -29,5 +33,16 @@
     <orderEntry type="library" name="ex_doc" level="project" />
     <orderEntry type="library" name="benchee" level="project" />
     <orderEntry type="library" name="connection" level="project" />
+    <orderEntry type="library" name="quantum" level="project" />
+    <orderEntry type="library" name="crontab" level="project" />
+    <orderEntry type="library" name="gen_stage" level="project" />
+    <orderEntry type="library" name="tzdata" level="project" />
+    <orderEntry type="library" name="earmark" level="project" />
+    <orderEntry type="library" name="excoveralls" level="project" />
+    <orderEntry type="library" name="credo" level="project" />
+    <orderEntry type="library" name="ecto" level="project" />
+    <orderEntry type="library" name="inch_ex" level="project" />
+    <orderEntry type="library" name="telemetry" level="project" />
+    <orderEntry type="library" name="telemetry" level="project" />
   </component>
 </module>
