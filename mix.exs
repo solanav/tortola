@@ -7,7 +7,13 @@ defmodule Tortola.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: [
+        prod: [
+          include_executables_for: [:windows],
+          steps: [:assemble, :tar]
+        ]
+      ]
     ]
   end
 
@@ -25,6 +31,7 @@ defmodule Tortola.MixProject do
       {:myxql, "~> 0.3.0"}, # Database access
       {:quantum, "~> 3.0"}, # Crontab
       {:tz, "~> 0.10.0"}, # Timezone database
+      {:logger_file_backend, "~> 0.0.11"}
     ]
   end
 end

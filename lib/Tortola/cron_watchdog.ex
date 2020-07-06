@@ -9,7 +9,7 @@ defmodule Tortola.CronWatchdog do
     end
 
     def update do
-        IO.puts GenServer.cast(__MODULE__, :update)
+        GenServer.cast(__MODULE__, :update)
     end
 
     # Server

@@ -1,5 +1,6 @@
 defmodule Tortola do
     use Application
+    import Crontab.CronExpression
 
     @moduledoc false
     def start(_type, _args) do
@@ -17,6 +18,9 @@ defmodule Tortola do
             Tortola.CronWatchdog,
             Tortola.Scheduler
         ]
+
+        # Update cron from db every 5 minutes
+        Tortola.Scheduler.add_job({~e[*/5 * * * *], &Tortola.CronWatchdog.update/0})
 
         # Start supervisor tree
         opts = [strategy: :one_for_one, name: Tortola.Supervisor]

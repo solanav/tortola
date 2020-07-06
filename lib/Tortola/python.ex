@@ -1,6 +1,6 @@
 defmodule Tortola.Python do
-    @pythonpathdef "C:\\Users\\anton\\PycharmProjects\\untitled\\venv\\Scripts\\python.exe"
-    @modulepathdef "C:\\Users\\anton\\PycharmProjects\\untitled\\main.py"
+    @pythonpathdef "C:\\Users\\antonio.solana\\PycharmProjects\\tortola\\venv\\Scripts\\python.exe"
+    @modulepathdef "C:\\Users\\antonio.solana\\PycharmProjects\\tortola\\main.py"
 
     def execute(ciclo) do
         # Datos para crear las fechas
